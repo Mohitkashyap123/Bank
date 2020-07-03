@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>result</title>
+  </head>
+  <body>
+    <h1>Result page</h1>
+
+    {% if option == 1 %}
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Name</th>
+      <th scope="col">IFSC</th>
+      <th scope="col">Id</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Adress</th>
+      <th scope="col">City</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      
+      <td>{{ bname.name}}</td>
+      <td>{{ bname.ifsc}}</td>
+      <td>{{ bname.bank_id}}</td>
+      <td>{{ bname.branch}}</td>
+      <td>{{ bname.address}}</td>
+      <td>{{ bname.city}}</td>
+      <td>{{ bname.district}}</td>
+      <td>{{ bname.state}}</td>
+    </tr>
+    
+  </tbody>
+</table>
+   
+    {% else %}
+
+
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Name</th>
+      <th scope="col">IFSC</th>
+      <th scope="col">Id</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Adress</th>
+      <th scope="col">City</th>
+      <th scope="col">District</th>
+      <th scope="col">State</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for branche in brnchs %}
+    <tr>
+      
+      <td>{{ branche.name}}</td>
+      <td>{{ branche.ifsc}}</td>
+      <td>{{ branche.bank_id}}</td>
+      <td>{{ branche.branch}}</td>
+      <td>{{ branche.address}}</td>
+      <td>{{ branche.city}}</td>
+      <td>{{ branche.district}}</td>
+      <td>{{ branche.state}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+    {% endif %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
